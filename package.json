@@ -1,0 +1,24 @@
+{
+  "name": "simwork",
+  "version": "1.0.0",
+  "description": "Project repository for simwork web app.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamSpera/simwork.git"
+  },
+  "author": "Adam T Spera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamSpera/simwork/issues"
+  },
+  "homepage": "https://github.com/AdamSpera/simwork#readme",
+  "dependencies": {
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "mysql": "^2.18.1"
+  }
+}
