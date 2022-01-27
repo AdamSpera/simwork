@@ -28,16 +28,16 @@
     <div class="form-container">
       <h1>Welcome to <span id="sim">Simwork</span></h1>
       <form id="signInForm">
-        <input type="text" placeholder="First Name" id="firstN">
-        <input placeholder="Last Name" id="lastN">
+        <input type="text" placeholder="First Name" id="firstN" required>
+        <input placeholder="Last Name" id="lastN" required>
         <label id="realL">
           Real Life  
-          <input type="radio" name="location" id="real">
+          <input type="radio" name="location" id="real" required>
         </label>
         <br>
         <label id="questL">
           Quest 2
-          <input type="radio" name="location" id="quest">
+          <input type="radio" name="location" id="quest" required>
         </label>
         <br>
         <button class="gs" id="submitBtn">Get Started</button>
