@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="icon" href="logo.png">
-  <title>Sign In</title>
+  <title>Get Started</title>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -20,24 +20,46 @@
 
 <body>
 
-
-
-  <div class="text-center">
-    <div class="footer">
-      <h4>
-        Powered by
-        <i class="fab fa-js"></i>
-        <i class="fab fa-html5"></i>
-        <i class="fab fa-css3"></i>
-        <i class="fab fa-node-js"></i>
-        made with thought.
-      </h4>
+  <div id="container">
+    <!-- <div class="header">
+      <img src="assets/simwork_toplogo_FINAL.png" width="50px" height="50px">
+      <h2 id="headerText">Thought</h2>
+    </div> -->
+    <div class="form-container">
+      <h1>Welcome to <span id="sim">Simwork</span>!</h1>
+      <form id="signInForm">
+        <input type="text" placeholder="First Name" id="firstN">
+        <input placeholder="Last Name" id="lastN">
+        <label id="realL">
+          Real Life  
+          <input type="radio" name="location" id="real">
+        </label>
+        <br>
+        <label id="questL">
+          Quest 2
+          <input type="radio" name="location" id="quest">
+        </label>
+        <br>
+        <button class="gs" id="submitBtn">Get Started</button>
+      </form>
     </div>
-    <div class="footer2">
-      <h4>
-        &copy;AdamSpera
-      </h4>
-    </div>
+    <footer>
+      <div class="footer">
+        <h4>
+          Powered by
+          <i class="fab fa-js"></i>
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3"></i>
+          <i class="fab fa-node-js"></i>
+          made with thought.
+        </h4>
+      </div>
+      <div class="footer2">
+        <h4>
+          &copy;AdamSpera
+        </h4>
+      </div>
+    </footer>
   </div>
 
   <script src="javascript/start.js"></script>

@@ -1,25 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;700&display=swap');
+
+body {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.header {
+  display: flex;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+  padding: 0.5em;
+  justify-content: space-between;
+}
+
+#headerText {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 5px;
+}
+
+#signOut {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  border-radius: 5px;
+  padding: 0px 10px;
+  height: auto;
+}
+
+#sim {
+  background: -webkit-linear-gradient(316deg, rgba(20, 119, 56), rgba(65, 226, 150));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-container {
+  min-width: 50%;
+  margin: auto auto;
+  text-align: center;
+}
+
+.form-container > h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+#signInForm {
+  width: 30%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+#firstN{
+  margin-top: 0.75em;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.25em;
+  padding: 0.5em;
+}
+
+#lastN {
+  margin: 0.5em 0;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.25em;
+  padding: 0.5em;
+}
+
+#firstN:focus, #lastN:focus {
+  outline: none;
+  border: 1px solid rgba(65, 226, 150);
+  -moz-box-shadow:    0px 0px 6px 0.5px rgba(65, 226, 150);
+  -webkit-box-shadow: 0px 0px 6px 0.5px rgba(65, 226, 150);
+  box-shadow:         0px 0px 6px 0.5px rgba(65, 226, 150);
+}
+
+#realL{
+  margin-top: 1em;
+}
+
+#questL {
+  margin-bottom: 1.5em;
+}
+
+.gs {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+}
+
+.gs:hover {
+  background-color: white;
+  color: black;
+}
+
+footer {
+  justify-self: flex-end;
+  text-align: center;
+}
+
 .footer h4{
-  color: #dddddd;
-  position:fixed;
-  left:0px;
-  bottom:20px;
-  right:0px;
+  color: rgba(0, 0, 0, 0.2);
   margin-bottom: 0.25rem;
   font-size: 0.8em;
 }
 .footer2 h4{
-  color: #dddddd;
-  position:fixed;
-  left:0px;
-  bottom:10px;
-  right:0px;
-  margin-bottom:0px;
-  font-size: 0.5em;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 0.6em;
   letter-spacing: 0.05rem;
-}
-.footer a {
-  color: #dddddd;
-}
-.footer2 a {
-  color: #dddddd;
 }
