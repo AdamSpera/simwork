@@ -39,6 +39,11 @@ app.get('/', function (req, res) {
   res.sendFile('public/start.html', { root: __dirname });
 })
 
+app.get('/dashboard', function (req, res) {
+  console.log(`[/dashboard]: Get request received at '/dashboard'`);
+  res.sendFile('public/dashboard.html', { root: __dirname });
+})
+
 app.get('/complete', function (req, res) {
   console.log(`[/complete]: Get request received at '/complete'`);
   let userCookie = (req.cookies.Simwork).split(':');
