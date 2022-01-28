@@ -18,16 +18,16 @@ submitBtn.addEventListener("click", function () {
     fetch('/getStarted', { method: 'POST', body: sendValue })
       .then(response => response.text())
       .then(text => {
+        console.log(text)
         if (text == 'Confirmed') {
+          console.log('GO TO DASH')
           location.href = '/dashboard';
         } else {
+          console.log('STAY HERE')
           location.href = '/';
         }
-
       })
   }
-
-
 })
 
 //Dark Mode Toggle
