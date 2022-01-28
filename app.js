@@ -39,7 +39,7 @@ app.get('/complete', function (req, res) {
   console.log(`[/complete]: Get request received at '/complete'`);
   let userCookie = (req.cookies.Simwork).split(':');
   // queries update taskscompleted by adding one to taskscompleted
-  connection.query("UPDATE `" + process.env.DATABASE + "`.`userinfo` SET `taskscompleted` = taskscompleted + 1 WHERE (`name` = '" + body[1] + "');", function (err, result, fields) {
+  connection.query("UPDATE `" + process.env.DATABASE + "`.`simwork` SET `taskscompleted` = taskscompleted + 1 WHERE (`name` = '" + body[1] + "');", function (err, result, fields) {
     if (!!error) {
       console.log(`[/complete]: Error adding to taskscompleted at ${body[1]}`);
       res.send('Failed');
@@ -56,7 +56,7 @@ app.post('/getStarted', (req, res) => {
     console.log(`[/getStarted]: Post request received at '/getStarted' (${body})`);
     body = body.toLowerCase();
     // query for if the account exists already
-    connection.query(`SELECT * FROM ${process.env.DATABASE}.userinfo WHERE name = ?`, [body], function (error, results, fields) {
+    connection.query(`SELECT * FROM ${process.env.DATABASE}.simwork WHERE name = ?`, [body], function (error, results, fields) {
       if (results.length > 0) {
         // user has an account already
         console.log('[/getStarted]: Name already registered');
@@ -65,7 +65,7 @@ app.post('/getStarted', (req, res) => {
       } else {
         // user does not already have an account
         console.log('[/getStarted]: Name not registered');
-        connection.query(`INSERT INTO ${process.env.DATABASE}.userinfo (name) VALUES ('${body}');`, function (error, result, field) {
+        connection.query(`INSERT INTO ${process.env.DATABASE}.simwork (name) VALUES ('${body}');`, function (error, result, field) {
           if (!!error) {
             console.log('[/getStarted]: There was an issue creating account');
             console.log(error);
