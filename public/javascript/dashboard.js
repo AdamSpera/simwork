@@ -38,3 +38,19 @@ rpDiv.addEventListener("click", function () {
 slDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
 })
+
+
+//Dark Mode Toggle
+const toggle = document.getElementById("darkMode");
+const allStyle = document.querySelector("body > *");
+toggle.checked = false;
+function toggleDarkMode() {
+  if (toggle.checked) {
+    allStyle.style.color = "#d1cdc7";
+    allStyle.style.backgroundColor = "#181a1b";
+  } else {
+    allStyle.style.color = "black";
+    allStyle.style.backgroundColor = "white";
+  }
+}
+toggle.addEventListener("click", toggleDarkMode);

@@ -17,10 +17,10 @@
 <body>
 
   <div id="container">
-    <!-- <div class="header">
-      <img src="assets/simwork_toplogo_FINAL.png" width="50px" height="50px">
-      <h2 id="headerText">Thought</h2>
-    </div> -->
+    <label class="switch" style="position: fixed; right: 0; margin: 0.75rem">
+      <input type="checkbox" id="darkMode">
+      <span class="slider round"></span>
+    </label>
     <div class="form-container">
       <h1>Welcome to <span id="sim">Simwork</span></h1>
       <form id="signInForm">
@@ -36,7 +36,7 @@
           <input type="radio" name="location" id="quest" required>
         </label>
         <br>
-        <button class="gs" id="submitBtn">Get Started</button>
+        <button class="gs-light" id="submitBtn">Get Started</button>
       </form>
     </div>
     <footer>

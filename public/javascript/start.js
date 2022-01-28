@@ -29,3 +29,20 @@ submitBtn.addEventListener("click", function () {
 
 
 })
+
+//Dark Mode Toggle
+const toggle = document.getElementById("darkMode");
+const allStyle = document.querySelector("body > *");
+toggle.checked = false;
+function toggleDarkMode() {
+  if (toggle.checked) {
+    allStyle.style.color = "#d1cdc7";
+    allStyle.style.backgroundColor = "#181a1b";
+    submitBtn.classList.toggle("gs-dark");
+  } else {
+    allStyle.style.color = "black";
+    allStyle.style.backgroundColor = "white";
+    submitBtn.classList.toggle("gs-dark");
+  }
+}
+toggle.addEventListener("click", toggleDarkMode);
