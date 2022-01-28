@@ -25,32 +25,37 @@ signOut.addEventListener("click", function () {
 // COOKIE --------------------------------------------------------------------- \/
 // TASKS ---------------------------------------------------------------------- /\
 
-var cards = {
-  PO : { 
-    "Jonah Roberts" : "279:A8T",
-    "Lauren Chance" : "743:KTT",
-    "Catharine Dee" : "634:POI"
-   },
-  AP : {
-    "name" : "input1:input2"
-  },
-  ML : { 
-    "name" : "input1:input2"
-   },
-  UP : {
-    "name" : "input1:input2"
-  },
-  RP : { 
-    "Tina Pelopoly" : "HWA:12"
-   },
-  SL : {
-    "Eric Timbler" : "12:45:74:89"
-  }
-};
+// var cards = {
+//   PO : { 
+//     "Jonah Roberts" : "279:A8T",
+//     "Lauren Chance" : "743:KTT",
+//     "Catharine Dee" : "634:POI"
+//    },
+//   AP : {
+//     "name" : "input1:input2"
+//   },
+//   ML : { 
+//     "name" : "input1:input2"
+//    },
+//   UP : {
+//     "name" : "input1:input2"
+//   },
+//   RP : { 
+//     "Tina Pelopoly" : "HWA:12"
+//    },
+//   SL : {
+//     "Eric Timbler" : "12:45:74:89"
+//   }
+// };
 
 // console.log(cards)
-// console.log(cards["PO"])
-// console.log(cards["PO"]["Jonah Roberts"])
+// if (cards["PO"]["Jonah Roberts"]) {
+//   console.log("Jonah Detected")
+// } else {
+//   console.log("Jonah Not Detected")
+// }
+
+// delete cards["PO"]["Jonah Roberts"];
 
 // TASKS ---------------------------------------------------------------------- \/
 // CARD SELECT ---------------------------------------------------------------- /\
