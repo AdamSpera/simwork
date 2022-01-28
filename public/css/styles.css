@@ -15,6 +15,7 @@ body {
 
 table {
   width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 td {
@@ -80,21 +81,47 @@ td {
   margin-top: 3rem;
 }
 
-#firstN{
+.firstN-light {
   margin-top: 0.75em;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 0.25rem;
   padding: 0.5rem;
 }
 
-#lastN {
+.lastN-light {
   margin: 0.5rem 0;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 0.25rem;
   padding: 0.5rem;
 }
 
-#firstN:focus, #lastN:focus {
+.firstN-light:focus, .lastN-light:focus {
+  outline: none;
+  border: 1px solid rgba(65, 226, 150);
+  -moz-box-shadow:    0px 0px 6px 0.5px rgba(65, 226, 150);
+  -webkit-box-shadow: 0px 0px 6px 0.5px rgba(65, 226, 150);
+  box-shadow:         0px 0px 6px 0.5px rgba(65, 226, 150);
+}
+
+.firstN-dark {
+  margin-top: 0.75em;
+  border: 1px solid rgba(65, 226, 150);
+  background-color: transparent;
+  color: #d1cdc7;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.lastN-dark {
+  margin: 0.5rem 0;
+  border: 1px solid rgba(65, 226, 150);
+  background-color: transparent;
+  color: #d1cdc7;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.firstN-dark:focus, .lastN-dark:focus {
   outline: none;
   border: 1px solid rgba(65, 226, 150);
   -moz-box-shadow:    0px 0px 6px 0.5px rgba(65, 226, 150);
@@ -229,20 +256,15 @@ td {
 footer {
   justify-self: flex-end;
   text-align: center;
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .footer h4{
-  color: rgba(0, 0, 0, 0.2);
   margin-bottom: 0.25rem;
   font-size: 0.8rem;
 }
 
-.footer > h4 > i {
-  color:rgba(0, 0, 0, 0.2)
-}
-
 .footer2 h4{
-  color: rgba(0, 0, 0, 0.2);
   font-size: 0.6rem;
   letter-spacing: 0.05rem;
 }

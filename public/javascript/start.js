@@ -33,16 +33,23 @@ submitBtn.addEventListener("click", function () {
 //Dark Mode Toggle
 const toggle = document.getElementById("darkMode");
 const allStyle = document.querySelector("body > *");
+const footerText = document.querySelector("footer");
 toggle.checked = false;
 function toggleDarkMode() {
   if (toggle.checked) {
     allStyle.style.color = "#d1cdc7";
     allStyle.style.backgroundColor = "#181a1b";
+    footerText.style.color = "#d1cdc7";
     submitBtn.classList.toggle("gs-dark");
+    firstN.classList.toggle("firstN-dark");
+    lastN.classList.toggle("lastN-dark");
   } else {
     allStyle.style.color = "black";
     allStyle.style.backgroundColor = "white";
+    footerText.style.color = "rgba(0, 0, 0, 0.2)";
     submitBtn.classList.toggle("gs-dark");
+    firstN.classList.toggle("firstN-dark");
+    lastN.classList.toggle("lastN-dark");
   }
 }
 toggle.addEventListener("click", toggleDarkMode);
