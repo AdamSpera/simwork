@@ -9,6 +9,8 @@ var upDiv = document.getElementById("upDiv");
 var rpDiv = document.getElementById("rpDiv");
 var slDiv = document.getElementById("slDiv");
 
+// COOKIE --------------------------------------------------------------------- /\
+
 function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
@@ -19,6 +21,14 @@ signOut.addEventListener("click", function () {
   document.cookie = 'Simwork' + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
   location.href = '/';
 })
+
+// COOKIE --------------------------------------------------------------------- \/
+// TASKS ---------------------------------------------------------------------- /\
+
+
+
+// TASKS ---------------------------------------------------------------------- \/
+// CARD SELECT ---------------------------------------------------------------- /\
 
 poDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
@@ -39,6 +49,8 @@ slDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
 })
 
+// CARD SELECT ---------------------------------------------------------------- \/
+// DARK MODE ------------------------------------------------------------------ /\
 
 //Dark Mode Toggle
 const toggle = document.getElementById("darkMode");
@@ -54,3 +66,5 @@ function toggleDarkMode() {
   }
 }
 toggle.addEventListener("click", toggleDarkMode);
+
+// DARK MODE ------------------------------------------------------------------ \/
