@@ -37,14 +37,14 @@ app.get('/dashboard', function (req, res) {
 
 app.get('/complete', function (req, res) {
   console.log(`[/complete]: Get request received at '/complete'`);
-  let userCookie = (req.cookies.Simwork).split(':');
+  let userCookie = req.cookies.Simwork;
   // queries update taskscompleted by adding one to taskscompleted
-  connection.query("UPDATE `" + process.env.DATABASE + "`.`" + process.env.TABLE + "` SET `taskscompleted` = taskscompleted + 1 WHERE (`name` = '" + body[1] + "');", function (err, result, fields) {
+  connection.query("UPDATE `" + process.env.DATABASE + "`.`" + process.env.TABLE + "` SET `taskscompleted` = taskscompleted + 1 WHERE (`name` = '" + userCookie + "');", function (error, result, fields) {
     if (!!error) {
-      console.log(`[/complete]: Error adding to taskscompleted at ${body[1]}`);
+      console.log(`[/complete]: Error adding to taskscompleted at ${userCookie}`);
       res.send('Failed');
     } else {
-      console.log(`[/complete]: Success adding to taskscompleted at ${body[1]}`);
+      console.log(`[/complete]: Success adding to taskscompleted at ${userCookie}`);
       res.send('Confirmed');
     }
   });
