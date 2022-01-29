@@ -111,7 +111,7 @@ signOut.addEventListener("click", function () {
 // TASKS ---------------------------------------------------------------------- /\
 
 // add event listener to all cards
-const btns = document.querySelectorAll('.todos');
+const btns = document.querySelectorAll('.taskCard');
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener('click', function (e) {
     btns[i].style.display = "none";
