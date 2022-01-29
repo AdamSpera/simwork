@@ -185,6 +185,7 @@ td {
   max-width: 75%;
   display: inline-flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .tasksCompleted {
@@ -222,7 +223,7 @@ td {
   height: auto;
   justify-content: center;
   align-items: center;
-  margin-top: 1%;
+  background-color: yellow;
 }
 
 .option {
@@ -345,8 +346,8 @@ input:checked + .slider:before {
 
 @media only screen and (max-width: 1350px) {
   .option {
-    width: 25%;
-    height: 50%;
+    width: 225px;
+    height: 225px;
     padding: 0;
   }
   .optionContent {
