@@ -2,7 +2,6 @@ var username = document.getElementById("username");
 var signOut = document.getElementById("signOut");
 var mainDash = document.getElementById("mainDash");
 var subDash = document.getElementById("subDash");
-var compTasks = document.getElementById("compTasks");
 var poDiv = document.getElementById("poDiv");
 var apDiv = document.getElementById("apDiv");
 var mlDiv = document.getElementById("mlDiv");
