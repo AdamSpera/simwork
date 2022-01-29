@@ -4,10 +4,7 @@ var mainDash = document.getElementById("mainDash");
 var subDash = document.getElementById("subDash");
 var compTasks = document.getElementById("compTasks");
 var poDiv = document.getElementById("poDiv");
-var apDiv = document.getElementById("apDiv");
-var mlDiv = document.getElementById("mlDiv");
 var upDiv = document.getElementById("upDiv");
-var rpDiv = document.getElementById("rpDiv");
 var slDiv = document.getElementById("slDiv");
 var title = document.getElementById("title"); // top of page
 var nameInput = document.getElementById("nameInput"); // name of card holder
@@ -29,63 +26,45 @@ var cards = {
     "Eric Marshall": "468:VFG",
     "Zidane Cope": "663:L6A",
     "Danika Duarte": "002:ATS",
-    "Branden Madden": "356:BHR"
-  },
-  'Archive Papers': {
+    "Branden Madden": "356:BHR",
     "Sarah Waller": "347:RTM",
     "Stewart Walker": "956:PO3",
-    "Keavy Horner": "345:SR5",
-    "Yolanda Blaese": "058:SXY",
-    "Arian Mccray": "235:9IT",
-    "Laurence Chapman": "620:FTE",
-    "Rhianne Beltran": "010:EEN",
-    "Kendra Sutherland": "235:HEL",
-    "Ronaldo Weir": "873:OW1",
-    "Haris Hampton": "334:EGT",
-    "William O'Quinn": "067:RE0",
-    "Emilis Ventura": "994:26G"
-  },
-  'Modify Laundry': {
-    "Evangeline Crane": "257:DH6",
-    "Bernadette Mooney": "476:2UD",
-    "Vernon Burnett": "132:PE6",
-    "Daniaal Bruce": "736:VR7",
-    "Emily Hester": "112:V0X",
-    "Can Mitchell": "976:PL8",
-    "Cora Stubbs": "346:ASC",
-    "Jun Strickland": "098:PLS",
-    "Kenneth Sheridan": "359:TNY",
-    "Glen Norman": "123:45D",
-    "Mateo Donovan": "643:UY8",
-    "Madison Whitfield": "918:input2"
+    "Keavy Horner": "345:SR57",
+    "Yolanda Blaese": "058:SXY8",
+    "Arian Mccray": "235:9IT5",
+    "Laurence Chapman": "620:FTE3",
+    "Rhianne Beltran": "010:E1ND",
+    "Kendra Sutherland": "235:HEL375",
+    "Ronaldo Weir": "873:OW1PLE",
+    "Haris Hampton": "334:EGTGER",
+    "William O'Quinn": "067:RE0K87",
+    "Emilis Ventura": "994:26G34T"
   },
   'Update Pass': {
-    "Buddy Soto": "090:input2",
-    "Tj Hackett": "012:input2",
-    "Mitchell Payne": "104:input2",
-    "Cadi Hebert": "678:input2",
-    "Andrew Melendez": "348:input2",
-    "Kyra Mathews": "995:input2",
-    "Tia Hyde": "100:input2",
-    "Nyle Carroll": "300:input2",
-    "Hudson Parrish": "335:input2",
-    "Hermione Davison": "985:input2",
-    "Bentley Williams": "248:input2",
-    "Antoinette Le": "965:input2"
-  },
-  'Release Power': {
-    "Tina Pelopoly": "856:12A",
-    "Nuha Wilkes": "128:R6G",
-    "Raja Davison": "478:HT5",
-    "Everly Hayward": "047:ST6",
-    "Aaliyah Best": "376:PDH",
-    "Sion Gamble": "195:295",
-    "Suraj Luna": "973:274",
-    "Jardel Mitchell": "528:FR7",
-    "Demi Hood": "765:PY3",
-    "Nicole Harris": "562:84G",
-    "Sabiha Huang": "358:MN4",
-    "Nicholas Caldwell": "160:ZX1"
+    "Buddy Soto": "090:34H",
+    "Tj Hackett": "012:98F",
+    "Mitchell Payne": "104:GE2",
+    "Cadi Hebert": "678:PME",
+    "Andrew Melendez": "348:H20",
+    "Kyra Mathews": "995:HGP",
+    "Tia Hyde": "100:GH0",
+    "Nyle Carroll": "300:MLT",
+    "Hudson Parrish": "335:GHN",
+    "Hermione Davison": "985:SLP",
+    "Bentley Williams": "248:SCP",
+    "Antoinette Le": "965:FGB",
+    "Evangeline Crane": "257:DH6",
+    "Bernadette Mooney": "476:2UD",
+    "Vernon Burnett": "132:PE6T",
+    "Daniaal Bruce": "736:VR75",
+    "Emily Hester": "112:V0X4",
+    "Can Mitchell": "976:PL8W",
+    "Cora Stubbs": "346:ASCR",
+    "Jun Strickland": "098:PLSFMY",
+    "Kenneth Sheridan": "359:TNY34F",
+    "Glen Norman": "123:45D67J",
+    "Mateo Donovan": "643:UY8ERH",
+    "Madison Whitfield": "918:RT6F23"
   },
   'Sign License': {
     "Eric Juliana": "AU:RO:CK:SS",
@@ -161,25 +140,10 @@ poDiv.addEventListener("click", function () {
   subDash.style.display = "block";
   title.innerText = "Process Order";
 })
-apDiv.addEventListener("click", function () {
-  mainDash.style.display = "none";
-  subDash.style.display = "block";
-  title.innerText = "Archive Papers";
-})
-mlDiv.addEventListener("click", function () {
-  mainDash.style.display = "none";
-  subDash.style.display = "block";
-  title.innerText = "Modify Laundry";
-})
 upDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
   subDash.style.display = "block";
   title.innerText = "Update Pass";
-})
-rpDiv.addEventListener("click", function () {
-  mainDash.style.display = "none";
-  subDash.style.display = "block";
-  title.innerText = "Release Power";
 })
 slDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
