@@ -4,7 +4,7 @@ body {
   font-family: 'Outfit', sans-serif;
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 #container {
@@ -17,6 +17,7 @@ body {
 table {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 10vh;
 }
 
 td {
@@ -177,13 +178,13 @@ td {
 
 .dashboardContainer {
   display: flex;
-  flex: 1;
-  height: 89.33vh;
+  height: 90vh;
 }
 
 .mainDashboard {
-  flex: 1;
-  display: inline-block;
+  max-width: 75%;
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .tasksCompleted {
@@ -192,7 +193,6 @@ td {
   padding: 0.5rem; 
   text-align: center;
   border-bottom-right-radius: 0.5rem;
-  display: inline-block;
 }
 
 /* .news {
@@ -215,20 +215,21 @@ td {
 } */
 
 .optionsContainer {
+  flex: 0 1 0;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
   height: auto;
-  max-width: 50%;
-  min-width: 800px;
-  margin: 1% auto;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
 }
 
 .option {
-  width: 25%;
-  height: 25%;
+  width: 300px;
+  height: 300px;
   border-radius: 0.5rem;
-  margin: 1rem 0.5rem;
+  margin: 1rem 1rem;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.15);
   transition: all .2s ease-in-out;
   display: flex;
@@ -257,7 +258,8 @@ td {
 
 .tasksContainer {
   box-shadow: -10px 0px 20px -5px rgba(0, 0, 0, 0.15);
-  width: 250px;
+  /* width: 250px; */
+  flex: 1;
   display: inline-block;
 }
 
@@ -339,4 +341,18 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 1350px) {
+  .option {
+    width: 25%;
+    height: 50%;
+    padding: 0;
+  }
+  .optionContent {
+    height: auto;
+  }
+  .optionContent > h2 {
+    font-size: 1.5rem;
+  }
 }
