@@ -2,6 +2,7 @@ var username = document.getElementById("username");
 var signOut = document.getElementById("signOut");
 var mainDash = document.getElementById("mainDash");
 var subDash = document.getElementById("subDash");
+var subDashSign = document.getElementById("subDashSign");
 var poDiv = document.getElementById("poDiv");
 var apDiv = document.getElementById("apDiv");
 var mlDiv = document.getElementById("mlDiv");
@@ -9,12 +10,20 @@ var upDiv = document.getElementById("upDiv");
 var rpDiv = document.getElementById("rpDiv");
 var slDiv = document.getElementById("slDiv");
 var title = document.getElementById("title"); // top of page
+var titleSign = document.getElementById("titleSign"); // top of page
 var nameInput = document.getElementById("nameInput"); // name of card holder
 var value1Input = document.getElementById("value1Input"); // value 1 field
 var value2Input = document.getElementById("value2Input"); // value 2 field
+var nameInputSign = document.getElementById("nameInputSign"); // name of card holder
+var value1InputSign = document.getElementById("value1InputSign"); // value 1 field
+var value2InputSign = document.getElementById("value2InputSign"); // value 2 field
+var value3InputSign = document.getElementById("value3InputSign"); // value 2 field
 var submitBtn = document.getElementById("submitBtn"); // submit button
 var feedText = document.getElementById("feedText"); // top of page
 var backBtn = document.getElementById("backBtn");
+var submitBtnSign = document.getElementById("submitBtnSign"); // submit button
+var feedTextSign = document.getElementById("feedTextSign"); // top of page
+var backBtnSign = document.getElementById("backBtnSign");
 var logo = document.getElementById("logo");
 logo.addEventListener("click", eraseOldData);
 
@@ -253,8 +262,8 @@ rpDiv.addEventListener("click", function () {
 })
 slDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
-  subDash.style.display = "inline-flex";
-  title.innerText = "Sign License";
+  subDashSign.style.display = "inline-flex";
+  titleSign.innerText = "Sign License";
 })
 
 // CARD SELECT ---------------------------------------------------------------- \/
@@ -264,6 +273,7 @@ function eraseOldData(){
   value1Input.value = '';
   value2Input.value = '';
   subDash.style.display = "none";
+  subDashSign.style.display = "none";
   mainDash.style.display = "flex";
 }
 // DARK MODE ------------------------------------------------------------------ /\
@@ -279,16 +289,28 @@ function toggleDarkMode() {
     nameInput.classList.toggle("firstN-dark");
     value1Input.classList.toggle("firstN-dark");
     value2Input.classList.toggle("firstN-dark");
+    nameInputSign.classList.toggle("firstN-dark");
+    value1InputSign.classList.toggle("firstN-dark");
+    value2InputSign.classList.toggle("firstN-dark");
+    value3InputSign.classList.toggle("firstN-dark");
     submitBtn.classList.toggle("gs-dark");
     backBtn.classList.toggle("gs-dark");
+    submitBtnSign.classList.toggle("gs-dark");
+    backBtnSign.classList.toggle("gs-dark");
   } else {
     allStyle.style.color = "black";
     allStyle.style.backgroundColor = "white";
     nameInput.classList.toggle("firstN-dark");
     value1Input.classList.toggle("firstN-dark");
     value2Input.classList.toggle("firstN-dark");
+    nameInputSign.classList.toggle("firstN-dark");
+    value1InputSign.classList.toggle("firstN-dark");
+    value2InputSign.classList.toggle("firstN-dark");
+    value3InputSign.classList.toggle("firstN-dark");
     submitBtn.classList.toggle("gs-dark");
     backBtn.classList.toggle("gs-dark");
+    submitBtnSign.classList.toggle("gs-dark");
+    backBtnSign.classList.toggle("gs-dark");
   }
 }
 toggle.addEventListener("click", toggleDarkMode);
