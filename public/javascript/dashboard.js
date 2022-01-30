@@ -139,11 +139,7 @@ submitBtn.addEventListener("click", function () {
       // delete this card from internat object
       delete cards[title.innerText][nameInput.value];
       // return to main dashboard
-      nameInput.value = '';
-      value1Input.value = '';
-      value2Input.value = '';
-      subDash.style.display = "none";
-      mainDash.style.display = "flex";
+      eraseOldData();
     } else {
       //user got it wrong
       feedText.innerText = "Credentials Invalid";
@@ -191,6 +187,14 @@ slDiv.addEventListener("click", function () {
 })
 
 // CARD SELECT ---------------------------------------------------------------- \/
+function eraseOldData(){
+  feedText.innerText = '';
+  nameInput.value = '';
+  value1Input.value = '';
+  value2Input.value = '';
+  subDash.style.display = "none";
+  mainDash.style.display = "flex";
+}
 // DARK MODE ------------------------------------------------------------------ /\
 
 //Dark Mode Toggle
@@ -212,16 +216,11 @@ function toggleDarkMode() {
     nameInput.classList.toggle("firstN-dark");
     value1Input.classList.toggle("firstN-dark");
     value2Input.classList.toggle("firstN-dark");
+    submitBtn.classList.toggle("gs-dark");
     backBtn.classList.toggle("gs-dark");
   }
 }
 toggle.addEventListener("click", toggleDarkMode);
-backBtn.addEventListener("click", () => {
-  nameInput.value = '';
-  value1Input.value = '';
-  value2Input.value = '';
-  subDash.style.display = "none";
-  mainDash.style.display = "flex";
-})
+backBtn.addEventListener("click", eraseOldData);
 
 // DARK MODE ------------------------------------------------------------------ \/
