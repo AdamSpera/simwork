@@ -88,10 +88,10 @@ var cards = {
     "Nicholas Caldwell": "160:ZX1"
   },
   'Sign License': {
-    "Eric Juliana": "AU:RO:CK:SS",
-    "Harrison Ford": "83:23:40:68",
-    "Mack Brynncel": "A5PB8:IOP73:PCL02:CHAM43",
-    "Thomas Cirtrise": "PL0[NARC2]9%YUL(12)95:PLA{127&@GU8}PL0R73BV:HE3K(&{/IPT@BL3%}%&)M:D791(HDNT%$HW&)I{S}D4"
+    "Eric Juliana": "AU:RO:CK",
+    "Harrison Ford": "83:23:40",
+    "Mack Brynncel": "A5PB8:IOP73:PCL02",
+    "Thomas Cirtrise": "PL0[NARC2]9%YUL(12)95:PLA{127&@GU8}PL0R73BV:HE3K(&{/IPT@BL3%}%&)M"
   }
 };
 
@@ -110,6 +110,75 @@ signOut.addEventListener("click", function () {
 
 // COOKIE --------------------------------------------------------------------- \/
 // TASKS ---------------------------------------------------------------------- /\
+
+// create and populate cards
+const cardTasksContainer = document.getElementById('tc');
+// loop through cards types 1-5 until there are no more loops left
+// 12 keys in types 1-5
+const cardKeys = Object.keys(cards);
+const poNames = Object.keys(cards['Process Order']);
+const apNames = Object.keys(cards['Archive Papers']);
+const mlNames = Object.keys(cards['Modify Laundry']);
+const upNames = Object.keys(cards['Update Pass']);
+const rpNames = Object.keys(cards['Release Power']);
+const slNames = Object.keys(cards['Sign License']);
+let slIndex = 0;
+for(let i = 0; i < 12; i++) {
+  // get i name in first card type through the fifth card type
+  const poName = poNames[i]; // get name i at card 0
+  const apName = apNames[i]; // get name i card 1
+  const mlName = mlNames[i]; // get name i card 2
+  const upName = upNames[i]; // get name i card 3
+  const rpName = rpNames[i]; // get name i card 4
+  const names = [poName, apName, mlName, upName, rpName];
+  const types = ['Process Order', 'Archive Papers', 'Modify Laundry', 'Update Pass', 'Release Power'];
+  let typeCounter = 0;
+  names.forEach(name => {
+    const taskCard = document.createElement("div");
+    taskCard.classList.add('taskCard');
+    const taskTitle = document.createElement("h2");
+    const nameText = document.createElement("h5");
+    taskTitle.appendChild(document.createTextNode(`${cardKeys[typeCounter]}`));
+    nameText.appendChild(document.createTextNode(name));
+    taskCard.appendChild(taskTitle);
+    taskCard.appendChild(nameText);
+    const cardData = cards[types[typeCounter]][name].split(':'); // array
+    for(let i = 0; i < cardData.length; i++) {
+      const p = document.createElement("p");
+      let text;
+      if (i == 0) {
+        text = 'ID: ';
+      } else if (i == 1) {
+        text = 'SCC: ';
+      }
+      p.appendChild(document.createTextNode(`${text}${cardData[i]}`));
+      taskCard.appendChild(p);
+    }
+    cardTasksContainer.appendChild(taskCard);
+    typeCounter++;
+  });
+  // i = 2, 5, 8, 11 placements for singing cards
+  if (i == 2 || i == 5 || i == 8 || i == 11) {
+    const slName = slNames[slIndex]; //this has to be a different counter
+    const taskCard = document.createElement("div");
+    taskCard.classList.add('taskCard');
+    const taskTitle = document.createElement("h2");
+    const nameText = document.createElement("h5");
+    taskTitle.appendChild(document.createTextNode(`${cardKeys[5]}`)); //5 is signing
+    nameText.appendChild(document.createTextNode(slName));
+    taskCard.appendChild(taskTitle);
+    taskCard.appendChild(nameText);
+    const cardData = cards['Sign License'][slName].split(':'); // arrays
+    for(let i = 0; i < cardData.length; i++) {
+      const p = document.createElement("p");
+      let text = `Computer ${i + 1}: `;
+      p.appendChild(document.createTextNode(`${text}?`));
+      taskCard.appendChild(p);
+    }
+    cardTasksContainer.appendChild(taskCard);
+    slIndex++;
+  }
+}
 
 // add event listener to all cards
 const btns = document.querySelectorAll('.taskCard');

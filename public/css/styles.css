@@ -302,9 +302,6 @@ td {
 
 .taskCard > p {
   display: inline;
-}
-
-.taskCard p:first-of-type{
   margin-right: 1rem;
 }
 
