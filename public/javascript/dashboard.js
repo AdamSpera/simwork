@@ -14,6 +14,7 @@ var value1Input = document.getElementById("value1Input"); // value 1 field
 var value2Input = document.getElementById("value2Input"); // value 2 field
 var submitBtn = document.getElementById("submitBtn"); // submit button
 var feedText = document.getElementById("feedText"); // top of page
+var backBtn = document.getElementById("backBtn");
 
 var cards = {
   'Process Order': {
@@ -138,6 +139,9 @@ submitBtn.addEventListener("click", function () {
       // delete this card from internat object
       delete cards[title.innerText][nameInput.value];
       // return to main dashboard
+      nameInput.value = '';
+      value1Input.value = '';
+      value2Input.value = '';
       subDash.style.display = "none";
       mainDash.style.display = "flex";
     } else {
@@ -201,15 +205,23 @@ function toggleDarkMode() {
     value1Input.classList.toggle("firstN-dark");
     value2Input.classList.toggle("firstN-dark");
     submitBtn.classList.toggle("gs-dark");
+    backBtn.classList.toggle("gs-dark");
   } else {
     allStyle.style.color = "black";
     allStyle.style.backgroundColor = "white";
     nameInput.classList.toggle("firstN-dark");
     value1Input.classList.toggle("firstN-dark");
     value2Input.classList.toggle("firstN-dark");
-    submitBtn.classList.toggle("gs-dark");
+    backBtn.classList.toggle("gs-dark");
   }
 }
 toggle.addEventListener("click", toggleDarkMode);
+backBtn.addEventListener("click", () => {
+  nameInput.value = '';
+  value1Input.value = '';
+  value2Input.value = '';
+  subDash.style.display = "none";
+  mainDash.style.display = "flex";
+})
 
 // DARK MODE ------------------------------------------------------------------ \/
