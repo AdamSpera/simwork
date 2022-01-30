@@ -139,7 +139,7 @@ submitBtn.addEventListener("click", function () {
       delete cards[title.innerText][nameInput.value];
       // return to main dashboard
       subDash.style.display = "none";
-      mainDash.style.display = "block";
+      mainDash.style.display = "flex";
     } else {
       //user got it wrong
       feedText.innerText = "Credentials Invalid";
@@ -157,32 +157,32 @@ submitBtn.addEventListener("click", function () {
 
 poDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
-  subDash.style.display = "block";
+  subDash.style.display = "inline-flex";
   title.innerText = "Process Order";
 })
 apDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
-  subDash.style.display = "block";
+  subDash.style.display = "inline-flex";
   title.innerText = "Archive Papers";
 })
 mlDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
-  subDash.style.display = "block";
+  subDash.style.display = "inline-flex";
   title.innerText = "Modify Laundry";
 })
 upDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
-  subDash.style.display = "block";
+  subDash.style.display = "inline-flex";
   title.innerText = "Update Pass";
 })
 rpDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
-  subDash.style.display = "block";
+  subDash.style.display = "inline-flex";
   title.innerText = "Release Power";
 })
 slDiv.addEventListener("click", function () {
   mainDash.style.display = "none";
-  subDash.style.display = "block";
+  subDash.style.display = "inline-flex";
   title.innerText = "Sign License";
 })
 
@@ -197,9 +197,17 @@ function toggleDarkMode() {
   if (toggle.checked) {
     allStyle.style.color = "#d1cdc7";
     allStyle.style.backgroundColor = "#181a1b";
+    nameInput.classList.toggle("firstN-dark");
+    value1Input.classList.toggle("firstN-dark");
+    value2Input.classList.toggle("firstN-dark");
+    submitBtn.classList.toggle("gs-dark");
   } else {
     allStyle.style.color = "black";
     allStyle.style.backgroundColor = "white";
+    nameInput.classList.toggle("firstN-dark");
+    value1Input.classList.toggle("firstN-dark");
+    value2Input.classList.toggle("firstN-dark");
+    submitBtn.classList.toggle("gs-dark");
   }
 }
 toggle.addEventListener("click", toggleDarkMode);
