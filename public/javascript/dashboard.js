@@ -230,7 +230,35 @@ submitBtn.addEventListener("click", function () {
   }
 })
 
-// delete cards["PO"]["Jonah Roberts"];
+submitBtnSign.addEventListener("click", function () {
+  if (cards[titleSign.innerText][nameInputSign.value]) {
+    //card is not complete
+    if (cards[titleSign.innerText][nameInputSign.value] == value1InputSign.value + ":" + value2InputSign.value + ":" + value3InputSign.value) {
+      // user is correct
+      feedTextSign.innerText = "Great! Card Complete!";
+      // add a completion to database
+      fetch('/complete', { method: 'GET' })
+        .then(response => response.text())
+        .then(text => {
+          if (text == 'Confirmed') {
+            console.log('Confirmed Card Complete')
+          } else {
+            console.log('Failed Card Complete')
+          }
+        })
+      // delete this card from internat object
+      delete cards[titleSign.innerText][nameInputSign.value];
+      // return to main dashboard
+      eraseOldData();
+    } else {
+      //user got it wrong
+      feedTextSign.innerText = "Credentials Invalid";
+    }
+  } else {
+    //card already completed
+    feedTextSign.innerText = "Name incorrect or card already complete!";
+  }
+})
 
 // TASKS ---------------------------------------------------------------------- \/
 // CARD SELECT ---------------------------------------------------------------- /\
@@ -267,11 +295,17 @@ slDiv.addEventListener("click", function () {
 })
 
 // CARD SELECT ---------------------------------------------------------------- \/
+
 function eraseOldData(){
   feedText.innerText = '';
   nameInput.value = '';
   value1Input.value = '';
   value2Input.value = '';
+  feedTextSign.innerText = '';
+  nameInputSign.value = '';
+  value1InputSign.value = '';
+  value2InputSign.value = '';
+  value3InputSign.value = '';
   subDash.style.display = "none";
   subDashSign.style.display = "none";
   mainDash.style.display = "flex";
@@ -315,5 +349,6 @@ function toggleDarkMode() {
 }
 toggle.addEventListener("click", toggleDarkMode);
 backBtn.addEventListener("click", eraseOldData);
+backBtnSign.addEventListener("click", eraseOldData);
 
 // DARK MODE ------------------------------------------------------------------ \/
