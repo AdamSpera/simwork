@@ -14,6 +14,14 @@ body {
   flex-wrap: wrap;
 }
 
+#logo {
+  margin-left: 1.5%;
+}
+
+#logo:hover {
+  cursor: pointer;
+}
+
 table {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);

@@ -15,6 +15,8 @@ var value2Input = document.getElementById("value2Input"); // value 2 field
 var submitBtn = document.getElementById("submitBtn"); // submit button
 var feedText = document.getElementById("feedText"); // top of page
 var backBtn = document.getElementById("backBtn");
+var logo = document.getElementById("logo");
+logo.addEventListener("click", eraseOldData);
 
 var cards = {
   'Process Order': {
