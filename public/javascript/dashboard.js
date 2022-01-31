@@ -68,21 +68,21 @@ var cards = {
     "Kenneth Sheridan": "359:TNY",
     "Glen Norman": "123:45D",
     "Mateo Donovan": "643:UY8",
-    "Madison Whitfield": "918:input2"
+    "Madison Whitfield": "918:SW6"
   },
   'Update Pass': {
-    "Buddy Soto": "090:input2",
-    "Tj Hackett": "012:input2",
-    "Mitchell Payne": "104:input2",
-    "Cadi Hebert": "678:input2",
-    "Andrew Melendez": "348:input2",
-    "Kyra Mathews": "995:input2",
-    "Tia Hyde": "100:input2",
-    "Nyle Carroll": "300:input2",
-    "Hudson Parrish": "335:input2",
-    "Hermione Davison": "985:input2",
-    "Bentley Williams": "248:input2",
-    "Antoinette Le": "965:input2"
+    "Buddy Soto": "090:KWE",
+    "Tj Hackett": "012:72T",
+    "Mitchell Payne": "104:O0O",
+    "Cadi Hebert": "678:WSI",
+    "Andrew Melendez": "348:MPD",
+    "Kyra Mathews": "995:GQ9",
+    "Tia Hyde": "100:NB5",
+    "Nyle Carroll": "300:1PZ",
+    "Hudson Parrish": "335:NEI",
+    "Hermione Davison": "985:AYE",
+    "Bentley Williams": "248:PO7",
+    "Antoinette Le": "965:PO3"
   },
   'Release Power': {
     "Tina Pelopoly": "856:12A",
